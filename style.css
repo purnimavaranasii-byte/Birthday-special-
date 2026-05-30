@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4e8a,#ff8fab,#ffc2d1);
+    font-family:'Segoe UI',sans-serif;
+    color:white;
+}
+
+.container{
+    text-align:center;
+    width:900px;
+    max-width:90%;
+    z-index:10;
+}
+
+h1{
+    font-size:4rem;
+    text-shadow:0 0 20px white;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 30px white;
+    }
+}
+
+#message{
+    margin-top:30px;
+    font-size:1.5rem;
+    line-height:1.8;
+    min-height:180px;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    font-size:20px;
+    cursor:pointer;
+    background:white;
+    color:#ff4e8a;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#surprise{
+    margin-top:20px;
+    font-size:1.8rem;
+}
+
+.balloon{
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    position:absolute;
+    bottom:-100px;
+}
+
+.red{
+    background:red;
+    left:10%;
+    animation:float 10s infinite linear;
+}
+
+.blue{
+    background:blue;
+    left:30%;
+    animation:float 8s infinite linear;
+}
+
+.green{
+    background:green;
+    left:70%;
+    animation:float 9s infinite linear;
+}
+
+.yellow{
+    background:gold;
+    left:90%;
+    animation:float 11s infinite linear;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:24px;
+    animation:rise 6s linear forwards;
+}
+
+@keyframes rise{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
